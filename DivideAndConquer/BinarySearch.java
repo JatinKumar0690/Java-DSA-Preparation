@@ -1,0 +1,44 @@
+//solved this question with Modified Binary search in Time complexity of O(logn)
+
+public class BinarySearch {
+    public static int search(int arr[], int tar, int si, int ei) {
+        // Base case
+        if (si > ei) {
+            return -1;
+        }
+        // work
+        int mid = si + (ei - si) / 2;
+        // Case Found
+        if (arr[mid] == tar) {
+            return mid;
+        }
+        // Mid on L1
+        if (arr[si] <= arr[mid]) {
+            // case a: Left
+            if (arr[si] <= tar && tar <= arr[mid]) {
+                return search(arr, tar, si, mid - 1);
+            }
+            // case b: Right
+            else {
+                return search(arr, tar, mid + 1, ei);
+            }
+        }
+        // Mid on L2
+        else {
+            // case c: Right
+            if (arr[mid] <= tar && tar <= arr[ei]) {
+                return search(arr, tar, mid + 1, ei);
+            }
+            // case d: Left
+            else {
+                return search(arr, tar, si, mid - 1);
+            }
+        }
+    }
+
+    public static void main(String args[]) {
+        int arr[] = { 4, 5, 6, 7, 0, 1, 2 };
+        int tar = 7;
+        System.out.println(search(arr, tar, 0, arr.length - 1)); // Output => 3
+    }
+}
