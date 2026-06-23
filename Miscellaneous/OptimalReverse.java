@@ -1,0 +1,22 @@
+
+//Reverse the given number (optimal).
+import java.util.Scanner;
+
+public class OptimalReverse {
+    public static int reverseDigits(int n) {
+        int reverse = 0;
+        while (n > 0) {
+            int lastDigit = n % 10;
+            reverse = (reverse * 10) + lastDigit;
+            n = n / 10;
+        }
+        return reverse;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(reverseDigits(n));
+        ;
+    }
+}
