@@ -6,7 +6,7 @@ public class TenMultiplesStop {
         System.out.println("Enter a valid number");
         int n = sc.nextInt();
         while (n > 0) {
-            if (n % 10 == 0) {
+            if (n % 5 == 0) {
                 System.out.println("You entered a valid number congrats !");
                 break;
             } else {
