@@ -35,11 +35,3 @@ JAVA DSA/
 │
 ├── Practice.java
 └── README.md
-
-How to Run
-
-To run any Java file from this repository, first navigate to the folder containing the file and then run it using the Java command.
-
-cd FolderName
-java FileName.java
-
