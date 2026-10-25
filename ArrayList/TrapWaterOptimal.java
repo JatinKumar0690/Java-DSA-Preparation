@@ -11,7 +11,7 @@ public class TrapWaterOptimal {
             int trapWater = ht * width;
             maximumWater = Math.max(trapWater, maximumWater);
             // conditions
-            if (lp < rp) {
+            if (height.get(lp) < height.get(rp)) {
                 lp++;
             } else {
                 rp--;
